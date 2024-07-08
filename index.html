@@ -39,7 +39,7 @@ layout: default
             Traditional reference segmentation tasks have predominantly focused on silent visual scenes, neglecting the integral role of multimodal perception and interaction in human experiences. In this work, we introduce a novel task called Reference Audio-Visual Segmentation (Ref-AVS), which seeks to segment objects within the visual domain based on expressions containing multimodal cues. 
             Such expressions are articulated in natural language forms but are enriched with multimodal cues, including audio and visual descriptions.
           </p>
-          <center><img src="{{ site.baseurl }}/static/img/refavs/refavs.png" alt="" style="width:70%;  margin-top:8px; margin-bottom:15px;"></center>
+          <center><img src="{{ site.baseurl }}/static/img/refavs/teaser.png" alt="" style="width:70%;  margin-top:8px; margin-bottom:15px;"></center>
       </div>
     </div>
 
@@ -47,10 +47,7 @@ layout: default
       <div class="col-md-12">
         <!-- <ul> -->
           <p class="text-muted">
-            <b>For instance</b>, as shown in this Figure, when answering the audio-visual question “<b>Which clarinet makes the sound first</b>” for this instrumental ensemble, it requires to locate sounding objects “<b>clarinet</b>” in the audio-visual scenario and focus on the “<b>first</b>” sounding “<b>clarinet</b>” in the timeline. To answer the question correctly, both effective audio-visual scene understanding and spatio-temporal reasoning are essentially desired.
-          </p>
-          <p class="text-muted">
-            Audio-visual question answering requires auditory and visual modalities for multimodal scene understanding and spatiotemporal reasoning. For example, when we encounter a complex musical performance scene involving multiple sounding and nonsounding instruments above, it is difficult to analyze the sound first term in the question by VQA model that only considers visual modality. While if we only consider the AQA model with mono sound, the left or right position is also hard to be recognized. However, we can see that using both auditory and visual modalities can answer this question effortlessly.
+            <b>For instance</b>, as shown in this Figure, Ref-AVS challenges machines to locate objects of interest in the visual space using multimodal cues, just like humans do in the real world, comparing to the Ref-AVS task with other related tasks..
           </p>
         <!-- </ul> -->
       </div>
@@ -88,14 +85,13 @@ layout: default
       <div class="col-md-4">
         <h4 class="service-heading">Characteristics</h4>
         <ul class="text-muted">
-          <li class="text-muted">3 typical multimodal scene</li>
-          <li class="text-muted">22 kinds of instruments</li>
-          <li class="text-muted">4 categories: String, Wind, Percussion and Keyboard.</li>
-          <li class="text-muted"><b>9,290</b> videos for over <b>150</b> hours</li>
-          <li class="text-muted">7,423 real videos</li>
-          <li class="text-muted">1,867 synthetic videos</li>
-          <li class="text-muted">9 audio-visual question types</li>
-          <li class="text-muted"><b>45,867</b> question-answer pairs</li>
+          <li class="text-muted">20,261 expressions</li>
+          <li class="text-muted">48 categories</li>
+          <li class="text-muted">4,002 videos</li>
+          <li class="text-muted">40,020 frames</li>
+          <li class="text-muted">6,888 objects</li>
+          <li class="text-muted">Audio, visual and temporal reference types</li>
+          <li class="text-muted">Pixel-level annotation\</li>
           <li class="text-muted">Diversity, complexity and dynamic</li>
         </ul>
       </div>
@@ -132,7 +128,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">MUSIC-AVQA Dataset</h2>
+        <h2 class="section-heading text-uppercase">Ref-AVS Dataset</h2>
         <h3 class="section-subheading text-muted">Some graphical representations of our dataset and annotations</h3>
       </div>
     </div>
@@ -142,9 +138,9 @@ layout: default
       
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/stat1.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/refavs/dataset_case.png" style="width: 100%" class="img-responsive"/> 
       </div>
-      <p class="text-muted" style="text-align:left"><b>Illustrations of our MUSIC-AVQA dataset statistics</b>. <b>(a-d)</b> statistical analysis of the videos and QA pairs. <b>(e)</b> Question formulas. <b>(f)</b> Distribution of question templates, where the dark color indicates the number of QA pairs generated from real videos while the light-colored area on the upper part of each bar means that from synthetic videos. <b>(g)</b> Distribution of first n-grams in questions. Our QA-pairs need <b>fine-grained scene understanding</b> and <b>spatio-temporal reasoning</b> over audio and visual modalities to be solved. For example, existential and location questions require spatial reasoning, and temporal questions require temporal reasoning. Best viewed in color.</p>
+      <p class="text-muted" style="text-align:left"><b>Illustrations of our MUSIC-AVQA dataset examples</b>.
     </div>
 
 
@@ -158,10 +154,10 @@ layout: default
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/stats-figures/comp_others.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/refavs/feature.png" style="width: 100%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left">
-        <b>Comparison with other video QA datasets</b>. Our MUSIC-AVQA dataset focuses on the interaction between visual objects and their produced sounds, offering QA pairs that covering audio questions, visual questions and audio-visual questions, which is more comprehensive than other datasets. The collected videos in MUSIC-AVQA can facilitate <b>audio-visual understanding in terms of spatial and temporal associations</b>.
+        <b>The distribution for both expressions and objects</b>. It visualizes the co-occurrence of objects in our dataset, where we can observe a dense web of connections spanning various categories, such as musical instruments, people, vehicles, etc. The rich combination of categories indicates that our dataset is not limited to a narrow set of scenarios but rather encompasses a broad spectrum of real-life scenes where such objects are likely to naturally appear together</b>.
       </p>
     </div>
 
