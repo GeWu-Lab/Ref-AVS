@@ -154,7 +154,7 @@ layout: default
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/img/refavs/feature.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/refavs/feature.png" style="width: 50%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left">
         <b>The distribution for both expressions and objects</b>. It visualizes the co-occurrence of objects in our dataset, where we can observe a dense web of connections spanning various categories, such as musical instruments, people, vehicles, etc. The rich combination of categories indicates that our dataset is not limited to a narrow set of scenarios but rather encompasses a broad spectrum of real-life scenes where such objects are likely to naturally appear together</b>.
@@ -506,16 +506,16 @@ layout: default
     
     <div class="row">
       <div class="col-md-12 text-center">
-        <h2 class="section-heading text-uppercase">A Simple Baseline for MUSIC-AVQA</h2>
+        <h2 class="section-heading text-uppercase">A Simple Baseline for Ref-AVS</h2>
         <!-- <h3 class="section-subheading text-muted">Challenge Details with links to &#9733;NEW&#9733; Codalab Leaderboards</h3> -->
-        <h3 class="section-subheading text-muted">Audio-visual spatial-temporal MUSIC-AVQA method, experimental results and simple analysis</h3>
+        <h3 class="section-subheading text-muted">Audio-visual spatial-temporal Ref-AVS method, experimental results and simple analysis</h3>
       </div>
     </div>
      
     <div class="row">
       <div class="col-md-12">
         <p class="text-muted" style="text-align:left">
-          To solve the AVQA problem, we propose a spatio-temporal grounding model to achieve scene understanding and reasoning over audio and visual modalities. And to benchmark different models, we use answer prediction accuracy as the evaluation metric and evaluate performance of different models on answering different types of audio, visual, and audio-visual questions. <b>More details in the <a href="{{ site.baseurl }}/static/files/MUSIC-AVQA.pdf">[Paper]</a> and <a href="{{ site.baseurl }}/static/files/MUSIC-AVQA-supp.pdf">[Supplementary]</a></b>.<br/>  
+          To solve the Ref-AVS problem, we propose a audio-visual grounding model with per-mask segmentation to achieve scene understanding and grounding over audio, visual and language modalities. And to benchmark different models, we use mIoU and F-Score as the evaluation metric. <b>More details in the <a href="{{ site.baseurl }}/static/files/Placeholder.pdf">[Paper]</a> and <a href="{{ site.baseurl }}/static/files/Placeholder.pdf">[Supplementary]</a></b>.<br/>  
         </p> 
       </div>
     </div>
@@ -523,13 +523,13 @@ layout: default
 
     <div class="row">
       <div class="col-md-12">
-        <h4 class="subheading">Spatio-temporal Grounding Model</h4>
-        <p class="text-muted" style="text-align:left">An overview of the proposed framework is illustrated in below figure. We consider that the sound and the location of its visual source usually reflects the spatial association between audio and visual modality, the <b>spatial grounding module</b>, which performs attention-based sound source localization, is therefore introduced to decompose the complex scenarios into concrete audio-visual association. To highlight the key timestamps that are closely associated to the question, we propose a <b>temporal grounding module</b>, which is designed for attending critical temporal segments among the changing audio-visual scenes and capturing question-aware audio and visual embeddings.</p>
+        <h4 class="subheading">Pipeline</h4>
+        <p class="text-muted" style="text-align:left">An overview of the proposed framework is illustrated in below figure.
         
         <div class="col-md centered" style="padding:0.2rem; text-align:center; margin-bottom:8px">
         <img src="{{ site.baseurl }}/static/img/experiments/framework_pipeline_long.png" style="width: 100%;" class="img-responsive"/> 
         </div>
-        <p class="text-muted" style="text-align:left">The <b>proposed audio-visual question answering model</b> takes pre-trained CNNs to extract audio and visual features and uses a LSTM to obtain a question embedding. We associate specific visual locations with the input sounds to perform spatial grounding, based on which audio and visual features of key timestamps are further highlighted via question query for temporal grounding. Finally, multimodal fusion is exploited to integrate audio, visual, and question information for predicting the answer to the input question. </p>
+        <p class="text-muted" style="text-align:left"> Detail can be found in  <a href="{{ site.baseurl }}/static/files/Placeholder.pdf">[Paper]</a> </p>
       </div>
     </div>
 
@@ -540,24 +540,23 @@ layout: default
       <div class="col-md-12">
         <h4 class="subheading">Experiments</h4>
         <p class="text-muted" style="text-align:left">
-          To study different input modalities and validate the effectiveness of the proposed model, we conduct extensive ablations of our model and compare to recent QA approaches. 
+          To study different input modalities and validate the effectiveness of the proposed model, we conduct extensive ablations of our model and compare to recent Refer-VOS and AVS approaches. 
         </p>
         <p class="text-muted" style="text-align:left; margin-right: 10px;">
-          <img src="{{ site.baseurl }}/static/img/experiments/exp2.png" align="right" width="40%" class="img-responsive"/> As shown in <b>right table</b>, we observe that leveraging audio, visual, and question information can boost AVQA task.
-          The <b>below table</b> shows that audio-visual video questiFon answering results of different methods on the test set of MUSIC-AVQA. And the top-2 results are highlighted.
+          <img src="{{ site.baseurl }}/static/img/experiments/exp1.png" align="right" width="40%" class="img-responsive"/> As shown in <b>right table</b>, we use three test subsets to evaluate the comprehensive ability of Ref-AVS methods. <b>Mix</b> is the average performance of <b>Seen</b> and <b>Unseen</b> test set. We also use <b>Null</b> test set to evaluate the robustness of multimodal-cue expression guidance..
         </p>
 
         <div class="col-md centered" style="padding:0.6rem; text-align:center">
-        <img src="{{ site.baseurl }}/static/img/experiments/exp1.png" style="width: 100%;" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/experiments/exp2.png" style="width: 100%;" class="img-responsive"/> 
         </div>
         <p class="text-muted" style="text-align:left">
-          The results <b>firstly</b> demonstrate that all AVQA methods outperform A-, V- and VideoQA methods, which indicates that AVQA task can be boosted through multisensory perception. <b>Secondly</b>, our method achieves considerable improvement on most audio and visual questions. For the audio-visual question that desires spatial and temporal reasoning, our method is clearly superior over other methods on most question types, especially on answering the <i>Counting</i> and <i>Location</i> questions. <b>Moreover</b>, the results confirm the potential of our dataset as a testbed for audio-visual scene understanding.
+          We conduct ablation studies to investigate the impact of two modalities (audio and text) information on the Ref-AVS task, as well as the effectiveness of the proposed method.
         </p>
       </div>
     </div>
 
 
-    <br/>
+    <!-- <br/>
 
     <div class="row">
       <div class="col-md-12">
@@ -568,7 +567,7 @@ layout: default
         </div>
         <p class="text-muted" style="text-align:left"><b>Visualized spatio-temporal grounding results</b>. Based on the grounding results of our method, the sounding area and key timestamps are accordingly highlighted in spatial and temporal perspectives <b>(a-e)</b>, respectively, which indicates that our method can model the spatio-temporal association over different modalities well, facilitating the scene understanding and reasoning. Besides, the subfigure <b>(f)</b> shows one failure case predicted by our method, where the complex scenario with multiple sounding and silent objects makes it difficult to correlate individual objects with mixed sound, leading to a wrong answer for the given question.</p>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -848,7 +847,7 @@ layout: default
       </div>
       <div class="col-md-6">
         <a href="https://www.bupt.edu.cn">
-          <img src="{{ site.baseurl }}/static/img/universities/bupt.jpg" alt="" style="width:80%;  margin-top:29px; margin-bottom:15px;">
+          <img src="{{ site.baseurl }}/static/img/universities/bupt.png" alt="" style="width:80%;  margin-top:29px; margin-bottom:15px;">
         </a>
       </div>
     </div>
