@@ -90,8 +90,8 @@ layout: default
           <li class="text-muted">4,002 videos</li>
           <li class="text-muted">40,020 frames</li>
           <li class="text-muted">6,888 objects</li>
-          <li class="text-muted">Audio, visual and temporal reference types</li>
-          <li class="text-muted">Pixel-level annotation\</li>
+          <li class="text-muted">Audio, visual, temporal</li>
+          <li class="text-muted">Pixel-level annotation</li>
           <li class="text-muted">Diversity, complexity and dynamic</li>
         </ul>
       </div>
@@ -100,7 +100,7 @@ layout: default
       <div class="col-md-4">
         <h4 class="service-heading">Personal data/Human subjects</h4>
         <!-- <ul class="text-muted"> -->
-          <p class="text-muted">Videos in MUSIC-AVQA are public on YouTube, and annotated via crowdsourcing. We have explained how the data would be used to crowdworkers. Our dataset does not contain personally identifiable information or offensive content.</p>
+          <p class="text-muted">Videos and Frames in Ref-AVS are public on YouTube, and annotated via crowdsourcing. We have explained how the data would be used to crowdworkers. Our dataset does not contain personally identifiable information or offensive content.</p>
         <!-- </ul> -->
       </div>
     </div>
@@ -138,7 +138,7 @@ layout: default
       
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/refavs/dataset_case.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/refavs/dataset_case.png" style="width: 100%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left"><b>Illustrations of our MUSIC-AVQA dataset examples</b>.
     </div>
@@ -154,7 +154,7 @@ layout: default
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="{{ site.baseurl }}/static/refavs/feature.png" style="width: 100%" class="img-responsive"/> 
+        <img src="{{ site.baseurl }}/static/img/refavs/feature.png" style="width: 100%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left">
         <b>The distribution for both expressions and objects</b>. It visualizes the co-occurrence of objects in our dataset, where we can observe a dense web of connections spanning various categories, such as musical instruments, people, vehicles, etc. The rich combination of categories indicates that our dataset is not limited to a narrow set of scenarios but rather encompasses a broad spectrum of real-life scenes where such objects are likely to naturally appear together</b>.
@@ -166,24 +166,24 @@ layout: default
 
     <div class="row justify-content-md-center text-center">
       <div class="col-md-12" style="text-align:left">
-        <h4 class="section-subheading" id="downloadFiles" style="text-align:left; margin-left:-14px">How was MUSIC-AVQA dataset made?</h4>
+        <h4 class="section-subheading" id="downloadFiles" style="text-align:left; margin-left:-14px">How was Ref-AVS dataset made?</h4>
       </div>
       <hr/>
       <p class="text-muted" style="text-align:left">
-        We design an audio-visual question answering labeling system to collect questions, and all QA pairs are collected with this system. The flow chart of the labeling system is shown in below figure.
+        We design an audio-visual customized system to collect questions, and all information are collected with this system. The flow chart of the labeling system is shown in below figure.
       </p>
       <center>
         <img src="{{ site.baseurl }}/static/img/stats-figures/annotation_framework.png" alt="" style="width:88%;  margin-top:10px; margin-bottom:10px;"> 
       </center>
       <p class="text-muted" style="text-align:left">
-        Labeling system contains <b>questioning</b> and <b>answering</b>. In the questioning section, the annotator is required to select the performance type of the video and the included instruments, and then scene types, question types, and question templates, and finally one question is automatically generated based on the previous selection. In the answering part, the annotator to judge whether the question is reasonable, and if it is unreasonable, the question will be labeled again. Then, the annotator answering the question according to video content, and finally one QA pair is produced.
+        Dataset collection pipeline. From the beginning, this pipeline has played a significant role in ensuring the efficiency and cost-effectiveness of the overall process, leading to the successful acquisition of high-quality samples.
       </p>
     </div>
 
     <br/>
 
 
-    <div class="row justify-content-md-center text-center">
+    <!-- <div class="row justify-content-md-center text-center">
       <div class="col-md-12" style="text-align:left">
         <h4 class="section-subheading" style="text-align:left; margin-left:-14px">QA pairs samples</h4>
       </div>
@@ -200,7 +200,7 @@ layout: default
       <p class="text-muted", style="text-align:left">
         In the first row, <b>a)</b>, <b>b)</b>, and <b>c)</b> represent real musical performance videos, namely solo, ensemble of the same instrument, and ensemble of different instruments. In the second row, <b>d)</b>, <b>e)</b>, and <b>f)</b> represent the synthetic video, which are audio and video random matching, audio overlay, and video stitching, respectively.
       </p>
-    </div>
+    </div> -->
 
 
     <div class="row justify-content-md-center text-center">
