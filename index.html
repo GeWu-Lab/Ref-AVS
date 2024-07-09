@@ -172,7 +172,7 @@ layout: default
       </div>
       <hr/>
       <p class="text-muted" style="text-align:left">
-        We design an audio-visual customized system to collect questions, and all information are collected with this system. The flow chart of the labeling system is shown in below figure.
+        We design an audio-visual customized system to collect question and segmentation label, and all information are collected with this system. The flow chart of the labeling system is shown in below figure.
       </p>
       <center>
         <img src="{{ site.baseurl }}/static/img/stats-figures/annotation_framework.png" alt="" style="width:88%;  margin-top:10px; margin-bottom:10px;"> 
@@ -222,15 +222,15 @@ layout: default
             <td style="width:1%"></td>
             <td style="width:31%">
               <video width="100%" controls="controls">
-                <source src="{{ site.baseurl }}/static/videos/music_avqa_example1.mp4" align="left" type="video/mp4">
+                <source src="{{ site.baseurl }}/static/videos/clip1.mp4" align="left" type="video/mp4">
               </video>
             </td>
-            <td style="width:1%"></td>
-            <td style="width: 67%; text-align:left; padding:0.2rem" class="text-muted">
+            <!-- <td style="width:1%"></td> -->
+            <!-- <td style="width: 67%; text-align:left; padding:0.2rem" class="text-muted">
               <b>Question</b>: How many instruments are sounding in the video? <br>
               <b>Answer</b>: two <br>
               To answer the question, an AVQA model needs to first identify objects and sound sources in the video, and then count all sounding objects. Although there are three different sound sources in the audio modality, only two of them are visible. Rather than simply counting all audio and visual instances, exploiting audio-visual association is important for AVQA.
-            </td>
+            </td> -->
           </tr>
         </table>
 
@@ -240,16 +240,16 @@ layout: default
             <td style="width:1%"></td>
             <td style="width:31%">
               <video width="100%" controls="controls">
-                <source src="{{ site.baseurl }}/static/videos/music_avqa_example2.mp4" align="left" type="video/mp4">
+                <source src="{{ site.baseurl }}/static/videos/clip2.mp4" align="left" type="video/mp4">
               </video>
             </td>
-            <td style="width:1%"></td>
+            <!-- <td style="width:1%"></td>
             <td style="width: 67%; text-align:left; padding:0.2rem" class="text-muted">
               <b>Question</b>: What is the first sounding instrument? <br>
               <b>Answer</b>: piano <br>
               To answer the question, an AVQA model needs to not only associate all instruments and their corresponding sounds in the video, but also identify the first instrument that makes sounds. Thus, the AVQA task is not a simple recognition problem, and it also involves <font color="orange"><b>audio-visual association</b></font> and <font color="orange"><b>temporal reasoning</b></font>. 
 
-            </td>
+            </td> -->
           </tr>
         </table>
 
@@ -259,15 +259,15 @@ layout: default
             <td style="width:1%"></td>
             <td style="width:31%">
               <video width="100%" controls="controls">
-                <source src="{{ site.baseurl }}/static/videos/music_avqa_example3.mp4" align="left" type="video/mp4">
+                <source src="{{ site.baseurl }}/static/videos/clip3.mp4" align="left" type="video/mp4">
               </video>
             </td>
-            <td style="width:1%"></td>
+            <!-- <td style="width:1%"></td>
             <td style="width: 67%; text-align:left; padding:0.2rem" class="text-muted">
               <b>Question</b>: What is the left instrument of the second sounding instrument? <br>
               <b>Answer</b>: guzheng <br>
               To answer the question, an AVQA model needs to first identify the second sounding instrument: flute and then infer the instrument at its left. Besides recognizing objects, exploring audio-visual association, and performing temporal reasoning, <font color="orange"><b>spatial reasoning</b></font> is also crucial for AVQA.
-            </td>
+            </td> -->
           </tr>
         </table>
 
