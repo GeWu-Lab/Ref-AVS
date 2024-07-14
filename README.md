@@ -27,3 +27,13 @@ towhee=1.1.3
 towhee-models=1.1.3  # Towhee is used for extracting VGGish audio feature.
 ```
 
+### Citation
+If you find this work useful, please consider citing it:
+```
+@article{wang2024segpref,
+          title={Can Textual Semantics Mitigate Sounding Object Segmentation Preference?},
+          author={Yaoting Wang, Peiwen Sun, Yuanchao Li, Honggang Zhang, Di Hu},
+          journal={IEEE European Conference on Computer Vision (ECCV)},
+          year={2024},
+        }
+```
