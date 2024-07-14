@@ -10,6 +10,9 @@ In this paper, we propose a pixel-level segmentation task called **Ref**erring *
 - Fig.2 shows the proposed baseline model to process multimodal-cues.
 ![Fig.2 Baseline](https://github.com/GeWu-Lab/Ref-AVS/blob/main/assets/fig2.png)
 
+- Fig.3 shows the statistics of this dataset.
+![Fig.3 Statistics](https://github.com/GeWu-Lab/Ref-AVS/blob/main/assets/fig3.png)
+
 ### >>> Run
 Run the training & evaluation:
 ```python
