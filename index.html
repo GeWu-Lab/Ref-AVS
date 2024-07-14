@@ -16,12 +16,12 @@ layout: default
         <h2 class="section-heading text-uppercase">Update</h2>
         <h5 class="text-muted" style="text-align:left;">
           <ul>
-              <li>? ? 2022: The dataset has been uploaded to <a href="https://drive.google.com/placeholder"><b>Google Drive</b></a>, welcome to download and use!</li>
+              <!-- <li>? ? 2022: The dataset has been uploaded to <a href="https://drive.google.com/placeholder"><b>Google Drive</b></a>, welcome to download and use!</li>
               <li>? ? 2022: The Ref-AVS dataset has been released, please see <font color="danger">Download</font> for details.</li>
               <li>? ? 2022: Code has been released <a href="https://github.com/GeWu-Lab/Ref-AVS">here</a>!</li>
               <li>? ? 2022: Watch the project's video demonstration on 
                 <a href="https://www.youtube.com/placeholder">YouTube</a> or 
-                <a href="https://www.bilibili.com/placeholder">Bilibili</a>.</li>
+                <a href="https://www.bilibili.com/placeholder">Bilibili</a>.</li> -->
               <li>15 July 2024: Camera-ready version has been released <a href="{{ site.baseurl }}/static/files/placeholder.pdf">here</a>!</li>
               <li>01 July 2024: Our paper is accepted for publication at ECCV2024. Camera-ready version and code will be released soon!</li>
           </ul>
@@ -389,82 +389,29 @@ layout: default
       <div class="col-md-12"> 
         
         <h4 class="section-subheading" id="downloadFiles">Data and Download </h4><hr/>
-        <P>Raw videos:
-          <ul>
-            <li>
-              <a href="https://drive.google.com/drive/folders/1WAryZZE0srLIZG8VHl22uZ3tpbGHtsrQ?usp=sharing">Google Drive</a>
-            </li>
-            <li>Baidu Drive (<b>password: cvpr</b>)</li>
-            - <a href="https://pan.baidu.com/s/1yVPfOXyDesHdUZFHK3tYog">Real videos</a> (36.67GB) <br/>
-            - <a href="https://pan.baidu.com/s/1b7HQbMdcfaWjsHdWiLWO2Q">Synthetic videos</a> (11.59GB) <br/>
-            <b>Note</b>: Please move all downloaded videos to a folder, for example, create a new folder named MUSIC-AVQA-Videos, which contains 9,288 real videos and synthetic videos.
-          </ul> 
-        </P>
-          
-        <p>Raw videos frames (1fps): Available at <a href="https://pan.baidu.com/s/1c9gvJrf6oGXqHVtNiuOlZQ">Baidu Drive</a> (14.84GB) (<b>pwd: cvpr</b>) or <a href="">Google Drive</a> (coming soon!). In fact, we thought it might be more convenient to execute the code above to extract video frames.</p>
-        
-        <p>Features (VGGish, ResNet18 and R(2+1)D):
-          <ul>
-            <li>VGGish feature shape: [T, 128]&nbsp;&nbsp;, Download from&nbsp;
-              <a href="https://pan.baidu.com/s/1TWzuXVPncuGFIv37q5rtKg">Baidu Drive</a> (pwd: cvpr) or 
-              <a href="https://drive.google.com/file/d/1n6mEKdjA5nqAHI89HDPoxNELRa8ayIuN/view?usp=sharing">Google Drive</a>,&nbsp;(~112.7M)</li>
-            <li>ResNet18 feature shape: [T, 512]&nbsp;&nbsp;, Download from&nbsp;
-              <a href="https://pan.baidu.com/s/1o-QSe0HJymeXAegVRA3bPw">Baidu Drive</a> (pwd: cvpr) or&nbsp;
-              <a href="https://drive.google.com/file/d/1mDZRvGMJIFyYytV_1ZLsolIFbAnoUxuC/view?usp=sharing">Google Drive</a>,&nbsp;(~972.6M)</li></li>
-            <li>R(2+1)D feature shape: [T, 512]&nbsp;&nbsp;, Download from&nbsp;
-              <a href="https://pan.baidu.com/s/13Ml-Je3Mmu46OSuMfYc6vQ">Baidu Drive</a> (pwd: cvpr) or 
-              <a href="https://drive.google.com/file/d/1q3benITu0dgL6HEx1c0MX-alcZNMdd5N/view?usp=sharing">Google Drive</a>,&nbsp;(~973.9M)</li></li>
-          </ul>
-        </p>
 
-        <p> Annotations (QA pairs, etc.): Available for download at <a href="https://github.com/GeWu-Lab/MUSIC-AVQA/tree/main/data/json">GitHub</a>.</p>          
+        <p>Frames and audio: Available at <a href="https://zenodo.org/records/12737763/files/media.zip?download=1">Zenodo</a> (16.1GB) (<b>pwd: cvpr</b>) or <a href="">Baidu Disk</a> (16.1GB) (<b>pwd: eccv</b>)
+
+        <p>Frames and audio (null set): <a href="https://zenodo.org/records/12737763/files/media_cross.zip?download=1">Zenodo</a> (1.1GB) (<b>pwd: cvpr</b>) or <a href="">Baidu Disk</a> (1.1GB) (<b>pwd: eccv</b>)
+
+        <p>Ground truth: Available at <a href="https://zenodo.org/records/12737763/files/gt_mask.zip?download=1">Zenodo</a> (0.2GB) (<b>pwd: cvpr</b>) or <a href="">Baidu Disk</a> (0.2GB) (<b>pwd: eccv</b>)
+
+        <p>Annotations: Available for download at <a href="https://zenodo.org/records/12737763/files/metadata.csv?download=1">Zenodo</a>.</p>          
         
         
-        <br/>
-        <h4 class="section-subheading">How to read the annotation files?</h4>
-        <p>
-          The annotation files are stored in JSON format. Each annotation file contains seven different keyword: "video_id", "question_id", "type", "question_content", "templ_values", "question_deleted" and "anser". 
-          <!-- The information contained in each keyword is as follows: -->
-          Below, we present a detailed explanation of each keyword.
-          <ul class="text-muted">
-            <li>"type": the question's modality information and type.</li>
-            <li>"question_id": the unique identifier to QA pairs. .</li>
-            <li>"video_id", "question_content", "templ_values" and "anser": The contents of these keywords together construct the Q-A pairs corresponding to the video with id "video_id". The form of &lt;<i>FL</i>&gt; is the template word in the question, and its specific content is the information contained in "templ_values". See the <a href="{{ site.baseurl }}/static/files/MUSIC-AVQA.pdf">paper</a> for a more specific question template description</li>
-            <li>"question_deleted": The check code during data annotation process and it will not be used in the dataloader.</li>
-          </ul>
-        </p>
-        <p>
-        Below, we show an example entry from the JSON file:
-        </p>
-        <pre class="sample-annotation">
-        <code>
-        {
-          "video_id": "00000272",
-          "question_id": 50,
-          "type": "[\"Audio-Visual\", \"Temporal\"]",
-          "question_content": "Where is the &lt;<i>FL</i>&gt; sounding instrument?",
-          "templ_values": "[\"first\"]",
-          "question_deleted": 0,
-          "anser": "right"
-        }</code>
-        </pre>
-        <p>
-          The example shows the information and annotations related to the QA pairs corresponding to the video with id "video_id". As noted, we assign the unique identifier "50" to that QA pairs. 
-          From the entry, we can retrieve the video name, questions, answer and type where the QA pairs belongs. 
-          For example, the example above needs to <b>combine audio and visual modality information</b> to make a correct answer to this <i>temporal</i> question.
-        </p>          
+      
 
         <br/>
         <h4 class="section-subheading">Publication(s)</h4>
-        <p>If you find our work useful in your research, please cite <a href="{{ site.baseurl }}/static/files/MUSIC-AVQA.pdf">our CVPR 2022 paper</a>.
+        <p>If you find our work useful in your research, please cite <a href="{{ site.baseurl }}/static/files/MUSIC-AVQA.pdf">our ECCV 2024 paper</a>.
         </p>
         <pre class="bibtex" style="text-align:left; margin-left:8px">
         <code>
-        @ARTICLE{Li2022Learning,
-          title={Learning to Answer Questions in Dynamic Audio-Visual Scenarios},
-          author={Guangyao li, Yake Wei, Yapeng Tian, Chenliang Xu, Ji-Rong Wen, Di Hu},
-          journal   = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-          year      = {2022},
+        @ARTICLE{Wang2022Ref,
+          title={Ref-AVS: Refer and Segment Objects in Audio-Visual Scenes},
+          author={Yaoting Wang, Peiwen Sun, Dongzhan Zhou, Guangyao Li, Honggang Zhang, Di Hu},
+          journal   = {IEEE European Conference on Computer Vision (ECCV)},
+          year      = {2024},
           <!-- Url       = {https://doi.org/xxx} -->
         }</code>
         </pre>
@@ -473,7 +420,7 @@ layout: default
         <br/>
         <h4 class="section-subheading">Disclaimer </h4>
         <!-- <p>The MUSIC-AVQA was collected as a tool for research in computer vision. The dataset may have unintended biases (including those of a societal, gender or racial nature).</p> -->
-        <p> The released MUSIC-AVQA dataset is curated, which perhaps owns potential correlation between instrument and geographical area. This issue warrants further research and consideration.
+        <p> The released Ref-AVS dataset is curated, which perhaps owns potential correlation between instrument and geographical area. This issue warrants further research and consideration.
         </p>
 
       </div>
