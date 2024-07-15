@@ -39,13 +39,6 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    "--exp",
-    type=str,
-    required=True,
-    help="exp to run.",
-)
-
-parser.add_argument(
     "--checkpoint",
     type=str,
     default=None,
