@@ -32,7 +32,7 @@ If you find this work useful, please consider citing it:
 ```
 @article{wang2024refavs,
           title={Ref-AVS: Refer and Segment Objects in Audio-Visual Scenes},
-          author={Yaoting Wang, Peiwen Sun, Dongzhan Zhou, Guangyao Li, Honggang Zhang, Di Hu},
+          author={Wang, Yaoting and Sun, Peiwen and Zhou, Dongzhan and Li, Guangyao and Zhang, Honggang and Hu, Di},
           journal={IEEE European Conference on Computer Vision (ECCV)},
           year={2024},
         }
