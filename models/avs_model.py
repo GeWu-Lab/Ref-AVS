@@ -122,12 +122,8 @@ class REFAVS_Model_Base(nn.Module):
 
         assert fused_T_with_A_part_A.shape[0] + fused_T_with_A_part_T.shape[0] == fused_T_with_A.shape[0]
 
-        if self.cfgs.exp == 'no_cache':
-            cues_A = fused_T_with_A_part_A.permute(1, 0, 2)
-            cues_V = fused_T_with_V_part_V.permute(1, 0, 2)
-        else:
-            cues_A = self.process_with_cached_memory(fused_T_with_A_part_A).permute(1, 0, 2)  # [bsz, len, dim_v]
-            cues_V = self.process_with_cached_memory(fused_T_with_V_part_V).permute(1, 0, 2)
+        cues_A = self.process_with_cached_memory(fused_T_with_A_part_A).permute(1, 0, 2)  # [bsz, len, dim_v]
+        cues_V = self.process_with_cached_memory(fused_T_with_V_part_V).permute(1, 0, 2)
         cues_T = (feat_text + fused_T_with_A_part_T.permute(1, 0, 2) + fused_T_with_V_part_T.permute(1, 0, 2)) \
             / torch.tensor(3.0).cuda()
 
@@ -139,12 +135,7 @@ class REFAVS_Model_Base(nn.Module):
         batch_prompt_emb = []
         for f in range(frame_n):
             cues_V_f = cues_V[:, f]
-
-            if self.cfgs.exp == 'no_code':
-                cues_mm = torch.concat([cues_A,  cues_V_f, cues_T], dim=1)
-            else:
-                cues_mm = torch.concat([cues_A, tag_A, cues_V_f, tag_V, cues_T], dim=1)
-
+            cues_mm = torch.concat([cues_A, tag_A, cues_V_f, tag_V, cues_T], dim=1)
             cues_mm, _ = self.mha_mm(cues_mm, cues_mm, cues_mm)
             batch_prompt_emb.append(cues_mm)
 
