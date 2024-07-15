@@ -24,6 +24,7 @@ Run the training & evaluation:
 cd Ref_AVS
 sh run.sh  # you should change your path configs. See /configs/config.py for more details.
 ```
+You can download the [checkpoint](https://pan.baidu.com/s/1NrNv1hTIqI7QAvNSwl7dvw?pwd=hh58) here.
 
 Core dependencies:
 ```
