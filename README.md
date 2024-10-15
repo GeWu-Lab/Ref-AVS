@@ -37,10 +37,10 @@ towhee-models=1.1.3  # Towhee is used for extracting VGGish audio feature.
 If you find this work useful, please consider citing it:
 ```
 @article{wang2024refavs,
-          title={Ref-AVS: Refer and Segment Objects in Audio-Visual Scenes},
-          author={Wang, Yaoting and Sun, Peiwen and Zhou, Dongzhan and Li, Guangyao and Zhang, Honggang and Hu, Di},
-          journal={IEEE European Conference on Computer Vision (ECCV)},
-          year={2024},
+  title={Ref-AVS: Refer and Segment Objects in Audio-Visual Scenes},
+  author={Wang, Yaoting and Sun, Peiwen and Zhou, Dongzhan and Li, Guangyao and Zhang, Honggang and Hu, Di},
+  journal={IEEE European Conference on Computer Vision (ECCV)},
+  year={2024},
 }
 
 @inproceedings{wang2024prompting,
