@@ -33,6 +33,10 @@ towhee=1.1.3
 towhee-models=1.1.3  # Towhee is used for extracting VGGish audio feature.
 ```
 
+### >>> FAQ
+##### (1) Alternative Audio Feature Extraction
+If you found the towhee is hard to establish, please consider using the following code with Google CoLab: [link](https://colab.research.google.com/drive/1r_8OnmwXKwmH0n4RxBfuICVBgpbJt_Fs?usp=sharing#scrollTo=MJWFPPSoAQzF).
+
 ### Citation
 If you find this work useful, please consider citing it:
 ```
