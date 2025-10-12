@@ -3,7 +3,7 @@ The official repo for "Ref-AVS: Refer and Segment Objects in Audio-Visual Scenes
 
 ### [Project Page](https://gewu-lab.github.io/Ref-AVS/)
 ### [Dataset Download](https://gewu-lab.github.io/Ref-AVS/#downloads)
-
+Note: RefAVS-Bench dataset is available now on [ModelScope](https://modelscope.cn/datasets/Gh0stAR/Ref-AVS-Bench).
 
 
 ### >>> Introduction
